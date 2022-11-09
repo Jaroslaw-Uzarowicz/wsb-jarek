@@ -8,7 +8,7 @@
             }
         }
         require_once('./connect.php');
-        $sql="UPDATE `users` SET `city_id` = '$_POST[city_id]', `name` = '$_POST[name]', `surname` = '$_POST[surname]' WHERE `users`.`id` = $_SESSION[`uptadeid`];";
+        $sql="UPDATE `users` SET `city_id` = '$_POST[city_id]', `name` = '$_POST[name]', `surname` = '$_POST[surname]' WHERE `users`.`id` = $_SESSION[updateid];";
         $conn->query($sql);
         if ($conn->affected_rows) {
             $_SESSION['info'] = "Prawidłowo dodano rekord";

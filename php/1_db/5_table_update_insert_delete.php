@@ -59,7 +59,7 @@ ADDUSER;
           </form>
 ADDUSER;
       } else {
-        echo '<a href="./4_table_insert_delete.php?adduser=1">Dodaj użytkownika</a>';
+        echo '<a href="./5_table_update_insert_delete.php?adduser=1">Dodaj użytkownika</a>';
       }
 
       if(!empty($_GET['updateuserid'])) {
@@ -89,7 +89,7 @@ UPDATEUSER;
             <input type="submit" value="Aktualizuj użytkownika"><br><br>
           </form>
 UPDATEUSER;
-        $_SESSION[`updateid`] = $user[`id`];
+        $_SESSION['updateid'] = $user['id'];
 
       }
      ?>
