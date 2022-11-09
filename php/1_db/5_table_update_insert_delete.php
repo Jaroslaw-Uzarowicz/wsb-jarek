@@ -13,12 +13,12 @@
   <!-- komunikaty -->
     <?php
       if (isset($_SESSION['info'])) {
-        echo $_SESSION['info'];
+        echo $_SESSION['infoszx'];
         unset($_SESSION['info']);
       }
     ?>
     <table>
-      <tr>s
+      <tr>
         <th>Imię i nazwisko</th>
         <th>Miasto</th>
         <th>Data utworzenia konta</th>
