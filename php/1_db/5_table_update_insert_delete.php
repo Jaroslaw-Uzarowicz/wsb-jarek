@@ -48,6 +48,7 @@ ADDUSER;
         $sql="SELECT * FROM `cities`";
         $result=$conn->query($sql);
         while ($city=$result->fetch_assoc()) {
+
           echo "<option value=\"$city[id]\">$city[city]</option>";
         }
         echo <<< ADDUSER
@@ -67,21 +68,28 @@ ADDUSER;
         $result=$conn->query($sql);
         $user= $result ->fetch_assoc();
         echo <<< UPDATEUSER
-          <form action="./scripts/add_user.php" method="post">
+          <form action="./scripts/update_user.php" method="post">
             <select name="city_id">
 UPDATEUSER;
+        // $sql="SELECT * FROM `cities`WHERE `id` =$user[city_id]";
         $sql="SELECT * FROM `cities`";
         $result=$conn->query($sql);
         while ($city=$result->fetch_assoc()) {
-          echo "<option value=\"$city[id]\">$city[city]</option>";
+          if ($city[`id`]==$user[`city_id`]){
+            echo "<option value=\"$city[id]\" selected>$city[city]</option>";
+          } else {
+            echo "<option value=\"$city[id]\">$city[city]</option>";
+          }
+
         }
         echo <<< UPDATEUSER
             </select><br><br>
             <input type="text" name="name" value="$user[name]"><br><br>
             <input type="text" name="surname" value="$user[surname]"><br><br>
-            <input type="submit" value="Dodaj użytkownika"><br><br>
+            <input type="submit" value="Aktualizuj użytkownika"><br><br>
           </form>
 UPDATEUSER;
+        $_SESSION[`updateid`] = $user[`id`];
 
       }
      ?>
