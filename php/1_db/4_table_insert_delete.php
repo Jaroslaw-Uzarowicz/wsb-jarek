@@ -34,7 +34,7 @@
           <td>$user[city]</td>
           <td>$user[created_at]</td>
           <td><a href="./scripts/delete_user.php?userid=$user[id]">Usuń</a></td>
-        </tr> sssda
+        </tr>
 E;
       }
       echo "</table>";
