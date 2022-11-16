@@ -14,6 +14,9 @@ print(worker['imiona_rodzicow'][0])
 worker['wzrost'] = 197
 print(worker)
 
+for value in worker.values():
+    print(value, end="")
+
 key = 'imie'
 
 if key in worker:
