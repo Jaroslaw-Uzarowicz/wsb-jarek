@@ -35,7 +35,7 @@
           <td>$user[created_at]</td>
           <td><a href="./scripts/delete_user.php?userid=$user[id]">Usuń</a></td>
           <td><a href="./5_table_update_insert_delete.php?updateuserid=$user[id]">Aktualizuj</a></td>
-        </tr>
+        </tr>sd
 E;
       }
       echo "</table>";
