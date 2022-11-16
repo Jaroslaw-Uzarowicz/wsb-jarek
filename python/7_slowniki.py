@@ -16,6 +16,8 @@ print(worker)
 
 for value in worker.values():
     print(value, end="")
+for key, value in worker.items():
+    print(f'{key}:{value}')
 
 key = 'imie'
 
@@ -29,3 +31,7 @@ print(worker)
 
 # dokończyć słowniki
 
+slownik = {
+    1: None,
+    2: 20
+}
