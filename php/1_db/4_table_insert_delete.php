@@ -34,7 +34,7 @@
           <td>$user[city]</td>
           <td>$user[created_at]</td>
           <td><a href="./scripts/delete_user.php?userid=$user[id]">Usuń</a></td>
-        </tr>
+        </tr> sssda
 E;
       }
       echo "</table>";
@@ -60,6 +60,6 @@ ADDUSER;
         echo '<a href="./4_table_insert_delete.php?adduser=1">Dodaj użytkownika</a>';
       }
      ?>
-      
+
   </body>
  </html>
